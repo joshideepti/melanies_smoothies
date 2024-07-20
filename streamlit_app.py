@@ -42,6 +42,10 @@ if ingredients_list:
                 #session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered!', icon="✅")
 
+import requests
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+st.text(fruityvice_response)
+
 
 #which actually means for each fruit_chosen in ingredients_list multiselect box: do everything below this line that is indented. 
 
