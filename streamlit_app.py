@@ -47,6 +47,10 @@ if ingredients_list:
         search_on=pd_df.loc[pd_df['FRUIT_NAME'] == fruit_chosen, 'SEARCH_ON'].iloc[0]
         if search_on:
             st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
+                if out:
+                        st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
+                elif
+                        st.write('The fruit doesnt exist in the Fruityvice.com')
             st.subheader(fruit_chosen + '  Nutrition Information')
             fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + search_on)
             fv_df = st.dataframe(data = fruityvice_response.json(), use_container_width=True)
@@ -55,6 +59,10 @@ if ingredients_list:
 
         elif fruit_chosen:
             st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
+                if out:
+                        st.write('The search value for ', fruit_chosen,' is ', search_on, '.')
+                elif
+                        st.write('The fruit doesnt exist in the Fruityvice.com')
             st.subheader(fruit_chosen + '  Nutrition Information')
             fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_chosen)
             fv_df = st.dataframe(data = fruityvice_response.json(), use_container_width=True)
