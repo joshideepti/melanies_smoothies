@@ -59,8 +59,9 @@ if ingredients_list:
             fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_chosen)
             if not fruityvice_response:
                 st.write('The selected fruits nutritional value doesnt exist in fruityvice.com')
-            fv_df = st.dataframe(data = fruityvice_response.json(), use_container_width=True)
-            my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
+            elif
+                fv_df = st.dataframe(data = fruityvice_response.json(), use_container_width=True)
+                my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_order)
                             values ('""" + ingredients_string + """','""" + name_on_order + """')"""
             
     time_to_insert =st.button('Submit Order')
