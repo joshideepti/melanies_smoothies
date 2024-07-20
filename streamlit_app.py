@@ -44,7 +44,8 @@ if ingredients_list:
 
 import requests
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response)
+st.text(fruityvice_response.json())
+fv_df = st.dataframe(data = fruitvyce_response.json(), use_container_width= TRUE)
 
 
 #which actually means for each fruit_chosen in ingredients_list multiselect box: do everything below this line that is indented. 
