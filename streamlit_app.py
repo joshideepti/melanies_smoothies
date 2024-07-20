@@ -1,5 +1,5 @@
 # Import python packages
-import streamlit as st
+import streamlit as st 
 import snowflake.snowpark as snowpark
 from snowflake.snowpark.functions import col
 from snowflake.snowpark.functions import col
@@ -25,7 +25,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col("FRUIT
 
 # convert snowpark dataframe to a pandas dataframe to use loc funtion 
 pd_df = dataframe.to_pandas()
-st.dataframe(pd_df)
+st.dataframe(data=pd_df, use_container_width=True)
 st.stop
 
 
