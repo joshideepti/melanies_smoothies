@@ -47,5 +47,5 @@ if ingredients_list:
 
 #st.write("Your favourite fruit is:", option)
 
-cnx = st.connection("snowflake")
+cnx = st.connection("Snowflake")
 session = cnx.session()
